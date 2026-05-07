@@ -7,8 +7,8 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-HOST = 'localhost'
-PORT = 8080
+HOST = '0.0.0.0'
+PORT = int(os.environ.get('PORT', 8080))
 BASE_DIR = Path(__file__).resolve().parent
 ITEM_DIMS = 16
 NEXT_ITEM_ID = 1
